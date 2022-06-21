@@ -1,4 +1,5 @@
 <script>
+    import Button, { Label } from '@smui/button';
     let count = 0;
     let name = 'world';
     $: doubled = count * 2;
@@ -11,6 +12,9 @@
   </script>
   {name}
   <input bind:value={name}>
-  <button on:click="{handleClick}">Click me!</button>
+  
+  <Button on:click="{handleClick}" touch  variant="outlined">
+    <Label>clicked</Label>
+  </Button>
   
   <p>{count} doubled is {doubled}</p>
